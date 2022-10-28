@@ -4,23 +4,56 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: black;
+}
+
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background-color: aquamarine;
     height: auto;
+    /* padding: 8px; */
+}
+
+header a {
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url("https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_1280.png");
+    width: 100%;
+    height: 200px;
+}
+
+.banner h2 {
+    background-color: blue;
+    float: right;
+    position: relative;
+    top: 100px;
     padding: 8px;
 }
 
 nav {
-    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
     margin:  auto 0;
+    padding: 8px;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -29,10 +62,6 @@ nav ul {
 nav ul li {
     text-decoration: none;
     margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
 }
 
 main {
@@ -50,6 +79,11 @@ section {
     border-right: 2px solid black;
     padding: 8px;
     width: 20%;
+    text-align: right;
+}
+
+.title h2 {
+    /* margin-right: 20px; */
 }
 
 .content {
@@ -58,9 +92,45 @@ section {
     margin: auto 0;
 }
 
+#work .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    background-color: blue;
+    border: 4px solid aqua;
+    margin: 4px 0;
+    width: 50%;
+    height: 100px;
+}
+
+#super {
+    background-image: url("http://placeimg.com/640/360/tech");
+    height: 200px;
+    width: 100%;
+    /* margin-right: 12px; */
+}
+
+#work .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#box2, #box4 {
+    background-image: url("https://loremflickr.com/640/360");
+    margin-right: 4px;
+} 
+#box3, #box5 {
+    background-image: url("https://placekitten.com/640/360");
+    margin-left: 4px;
+}
+
 .links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 100%; */
     justify-content: space-between;
     list-style: none;
     padding: 0;
@@ -76,9 +146,11 @@ section {
 }
 
 footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: gray;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 2.5rem;       
 }
